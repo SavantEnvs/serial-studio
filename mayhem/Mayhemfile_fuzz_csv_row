@@ -1,0 +1,9 @@
+project: savantenvs/serial-studio
+target: fuzz_csv_row
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_csv_row/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_csv_row
+    libfuzzer: true
+    timeout: 5

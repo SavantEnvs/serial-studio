@@ -1,0 +1,9 @@
+project: savantenvs/serial-studio
+target: fuzz_s7_pdu
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_s7_pdu/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_s7_pdu
+    libfuzzer: true
+    timeout: 5

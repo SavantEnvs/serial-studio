@@ -1,0 +1,9 @@
+project: savantenvs/serial-studio
+target: fuzz_block_codec
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_block_codec/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_block_codec
+    libfuzzer: true
+    timeout: 5

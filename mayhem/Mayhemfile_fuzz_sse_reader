@@ -1,0 +1,9 @@
+project: savantenvs/serial-studio
+target: fuzz_sse_reader
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_sse_reader/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_sse_reader
+    libfuzzer: true
+    timeout: 5
